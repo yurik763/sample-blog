@@ -1,6 +1,15 @@
 <h1>New article</h1>
 
 <%= form_for :article, url: articles_path do |f| %>
+	<% if @article && @article.errors.any? %>
+	<p>
+		<ul>
+		<% @article.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</p>
+	<% end %>
 	<p>
 		<%= f.label :title %><br />
 		<%= f.text_field :title %>
@@ -12,6 +21,6 @@
 	</p>
 
 	<p>
-		<%= f.submit %>
+		<%= f.submit 'Добавить статью' %>
 	</p>
 <% end %>
