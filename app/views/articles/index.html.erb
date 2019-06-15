@@ -5,6 +5,7 @@
 	<p><%= article.text %></p>
 	<p><%= link_to "Показать статью", article_path(article) %> |
 	   <%= link_to "Редактировать статью", edit_article_path(article) %>
+	   <%= link_to "Удалить статью", article_path(article), method: :delete %>
 	</p>
 	<hr />
 <% end %>
