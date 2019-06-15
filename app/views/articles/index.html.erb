@@ -3,5 +3,8 @@
 <% @articles.each do |article| %>
 	<h2><%= article.title %></h2>
 	<p><%= article.text %></p>
+	<p><%= link_to "Показать статью", article_path(article) %> |
+	   <%= link_to "Редактировать статью", edit_article_path(article) %>
+	</p>
 	<hr />
 <% end %>
