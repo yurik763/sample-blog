@@ -10,19 +10,47 @@
   </head>
 
   <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/home/index">Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home/index">Главная <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/articles">Статьи</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/articles/new">Новая статья</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contacts">Связаться с нами</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+          <% if user_signed_in? %>
+            Hello, <%= current_user.username%> | <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 
-    <% if user_signed_in? %>
-    Hello, <%= current_user.username%> | <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+            <% else %>
 
-    <% else %>
+            <%= link_to "Sign In", new_user_session_path %>
 
-    <%= link_to "Sign In", new_user_session_path %>
+            <% end %>
 
-    <% end %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
+      </span>
+    </div>
+    </nav>
 
     <%= yield %>
+  </div>
+
   </body>
 </html>
