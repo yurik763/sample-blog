@@ -6,7 +6,8 @@
 <% @article.comments.each do |comment| %>
 	<p>
 	<i><%= comment.author %> сказал:</i><br />
-	<%= comment.body %>
+	<%= comment.body %><br />
+	<span style="font-size: 75%; color: #999"><%= comment.created_at %></span>
 	</p>
 	<hr />
 <% end %>
