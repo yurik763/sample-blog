@@ -59,3 +59,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bootstrap'
 gem 'jquery-rails'
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
