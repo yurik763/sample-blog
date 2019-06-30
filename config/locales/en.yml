@@ -34,3 +34,6 @@ en:
 
   contacts:
     contact_us: "Contact Us!"
+    contact_message: "Спасибо"
+  articles:
+    articles_new: "New article"

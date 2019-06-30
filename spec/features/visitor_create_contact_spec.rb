@@ -13,6 +13,6 @@ feature "Comtact Creation" do
     fill_in :contact_message, :with => 'something'
     click_button 'Отправить сообщение'
 
-    expect(page).to have_content 'Спасибо'
+    expect(page).to have_content I18n.t('contacts.contact_message')
   end
 end
