@@ -2,7 +2,7 @@
 <p><%= @article.text %></p>
 
 
-<h2>Коментарий</h2>
+<h2><%= t('comments.comment_title') %></h2>
 <% @article.comments.each do |comment| %>
 	<p>
 	<i><%= comment.author %> сказал:</i><br />

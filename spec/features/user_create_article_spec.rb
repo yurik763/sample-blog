@@ -10,5 +10,13 @@ feature "Article Creation" do
   scenario "allows user to visit new article page" do
     visit new_article_path
     expect(page).to have_content I18n.t('articles.articles_new')
-  end 
+  end
+
+  scenario "allows user to create new article" do
+    visit new_article_path
+    fill_in :article_text, :with => 'something'
+    click_button 'Добавить статью'   
+
+   expect(page).to have_content I18n.t('comments.comment_title')
+  end  
 end

@@ -37,3 +37,5 @@ en:
     contact_message: "Спасибо"
   articles:
     articles_new: "New article"
+  comments:
+    comment_title: "Коментарий"
