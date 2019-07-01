@@ -12,7 +12,7 @@
 	<hr />
 <% end %>
 
-<h2>Добавить комментарий</h2>
+<h2><%= t('comments.comment_create') %></h2>
 <p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
@@ -22,6 +22,6 @@
 	</p>
 
 	<p>
-		<%= f.submit 'Добавить комментарий' %>
+		<%= f.submit t('comments.comment_create') %>
 <% end %>
 </p>

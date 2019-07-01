@@ -11,10 +11,10 @@ feature "Comment Creation" do
     visit new_article_path
 
     fill_in :article_text, :with => "Content for new article"
-    click_button 'Добавить статью' 
+    click_button I18n.t('articles.article_create')
     
     fill_in :comment_body, :with => 'something'
-    click_button 'Добавить комментарий'   
+    click_button I18n.t('comments.comment_create')   
 
    expect(page).to have_content I18n.t('comments.comment_title')
   end  

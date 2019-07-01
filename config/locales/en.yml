@@ -37,5 +37,8 @@ en:
     contact_message: "Спасибо"
   articles:
     articles_new: "New article"
+    article_create: "Добавить статью"
+    article_edit: "Редактировать статью"
   comments:
     comment_title: "Коментарий"
+    comment_create: "Добавить комментарий"

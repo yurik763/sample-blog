@@ -1,4 +1,4 @@
-<h1>Редактирование статьи</h1>
+<h1><%= t('articles.article_edit') %></h1>
 
 <%= form_for :article, url: article_path(@article), method: :put do |f| %>
 	<p>
@@ -12,6 +12,6 @@
 	</p>
 
 	<p>
-		<%= f.submit 'Редактировать статью' %>
+		<%= f.submit t('articles.article_edit') %>
 	</p>
 <% end %>
